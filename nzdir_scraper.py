@@ -51,11 +51,10 @@ def scrape(category = ''):
         result = requests.get(full_url)
         src = result.content
         soup = BeautifulSoup(src, 'html.parser')
-    
-    for lead in leads:
-        print(lead)
+
+    return leads
 
 
 
 
-scrape('automotives')
+print(scrape('automotives'))
