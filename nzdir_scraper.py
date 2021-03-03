@@ -1,10 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-
-#soup = BeautifulSoup(src, 'html.parser')
-
 def scrape(category = ''):
     BASE_URL = 'https://www.nzdirectory.co.nz/'
 
@@ -16,6 +12,7 @@ def scrape(category = ''):
 
     leads = []
 
+    #loops for all pages
     total_pages = len(soup.find_all('div', {'class': 'pages'}))
     current_page = 1
     while current_page <= total_pages:
