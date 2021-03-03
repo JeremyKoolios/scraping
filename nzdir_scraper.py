@@ -51,7 +51,4 @@ def scrape(category = ''):
 
     return leads
 
-
-
-
 print(scrape('automotives'))
