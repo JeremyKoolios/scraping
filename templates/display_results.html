@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hi</p>
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+        {% for lead in leads %}
+        <tr>
+            <td>{{leads[leads.index(lead)][0]}}</td>
+            <td>{{leads[leads.index(lead)][1]}}</td>
+            <td>{{leads[leads.index(lead)][2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
