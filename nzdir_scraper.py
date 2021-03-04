@@ -50,5 +50,3 @@ def scrape(category = ''):
         soup = BeautifulSoup(src, 'html.parser')
 
     return leads
-
-print(scrape('automotives'))
